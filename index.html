@@ -35,7 +35,7 @@
             </div>
             <div class="navbar-end">
               <img src="./assets/coin.png" alt="">
-              <h3 class="text-xl font-semibold space-x-2">5500 BDT</h3>
+              <h3 class="text-xl font-semibold space-x-2" id="account-balance">5500 BDT</h3>
             </div>
           </div>
           <div class="flex space-x-5 justify-center mb-10 mt-10 lg:mt-20">
@@ -47,9 +47,9 @@
       
       <!-- Donation Section Starts here -->
 
-        <section id="donation-section">
+        <section  id="donationSection">
 
-          <!-- Section -1 -->
+          <!--Card Section -1 -->
         <section class="flex justify-around">
           <div class="card lg:card-side bg-base-100 shadow-xl">
               <figure>
@@ -61,20 +61,20 @@
                   <div class="">
                       <button class="btn btn-seconday">
                           <img src="./assets/coin.png" alt="">
-                              <span class="font-bold text-2xl">5050 BDT</span>
+                              <span id="charity1Amount" class="font-bold text-2xl">5050 BDT</span>
                          </button>
                   </div>
                 <h2 class="card-title text-3xl font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
                 <p class="text-xl"> The recent floods in Noakhali have caused significant damage to <br> homes  infrastructure. Your donation will help provide essential <br> supplies and  to those affected by this disaster. Every contribution, <br> big or  ,small, makes  difference. Please join us in supporting the relief <br> efforts and making a positive impact on the lives of those in need.</p>
-                <input class="text-xl  rounded-lg grid col-span-full bg-slate-100 p-5" type="text" placeholder="Write Donation Amount">
+                <input id="donationAmount1" class="text-xl  rounded-lg grid col-span-full bg-slate-100 p-5" type="text" placeholder="Write Donation Amount">
                 <div class="card-actions grid">
-                  <button class="btn btn-primary col-span-full text-2xl font-semibold">Donate Now</button>
+                  <button onclick="donate(1)" class="btn btn-primary col-span-full text-2xl font-semibold">Donate Now</button>
                 </div>
               </div>
             </div>
       </section>
 
-      <!-- section-2 -->
+      <!--Card section-2 -->
 
       <section class="flex justify-around">
           <div class=" mt-10 card lg:card-side bg-base-100 shadow-xl">
@@ -87,14 +87,14 @@
                   <div class="">
                       <button class="btn btn-seconday">
                           <img src="./assets/coin.png" alt="">
-                              <span class="font-bold text-2xl">1400 BDT</span>
+                              <span id="charity2Amount" class="font-bold text-2xl">1400 BDT</span>
                          </button>
                   </div>
                 <h2 class="card-title text-3xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h2>
                 <p class="text-xl"> The recent floods in Noakhali have caused significant damage to <br> homes  infrastructure. Your donation will help provide essential <br> supplies and  to those affected by this disaster. Every contribution, <br> big or  ,small, makes  difference. Please join us in supporting the relief <br> efforts and making a positive impact on the lives of those in need.</p>
                 <input class="text-xl  rounded-lg grid col-span-full bg-slate-100 p-5" type="text" placeholder="Write Donation Amount">
                 <div class="card-actions grid">
-                  <button class="btn btn-primary col-span-full text-2xl font-semibold">Donate Now</button>
+                  <button onclick="donate(2)" class="btn btn-primary col-span-full text-2xl font-semibold">Donate Now</button>
                 </div>
               </div>
             </div>
@@ -113,21 +113,35 @@
                   <div class="">
                       <button class="btn btn-seconday">
                           <img src="./assets/coin.png" alt="">
-                              <span class="font-bold text-2xl">3000 BDT</span>
+                              <span id="charity3Amount" class="font-bold text-2xl">3000 BDT</span>
                          </button>
                   </div>
                 <h2 class="card-title text-3xl font-bold">Aid for Injured in the Quota Movement</h2>
                 <p class="text-xl"> The recent floods in Noakhali have caused significant damage to <br> homes  infrastructure. Your donation will help provide essential <br> supplies and  to those affected by this disaster. Every contribution, <br> big or  ,small, makes  difference. Please join us in supporting the relief <br> efforts and making a positive impact on the lives of those in need.</p>
-                <input class="text-xl  rounded-lg grid col-span-full bg-slate-100 p-5" type="text" placeholder="Write Donation Amount">
+                <input id="donationAmount3" class="text-xl  rounded-lg grid col-span-full bg-slate-100 p-5" type="number" placeholder="Write Donation Amount">
                 <div class="card-actions grid">
-                  <button class="btn btn-primary col-span-full text-2xl font-semibold">Donate Now</button>
+                  <button class="btn btn-primary col-span-full text-2xl font-semibold" onclick="donate(3)">Donate Now</button>
                 </div>
               </div>
             </div>
       </section>
         </section>
 
-        <!-- history section -->
+        <!-- History Section (Initially Hidden) -->
+
+      <section id="historySection" class="hidden">
+        <h2 class="text-2xl font-semibold mb-6">Transaction History</h2>
+        <div id="historyContent" class="bg-gray-200 p-4 rounded-lg"></div>
+      </section>
+
+      <!-- Modal for Successful Donation -->
+
+  <div id="successModal" class="modal fixed inset-0 bg-gray-700 bg-opacity-75 flex items-center justify-center">
+    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+      <p class="text-xl font-semibold">Donation Successful!</p>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 mt-4 rounded" onclick="closeModal()">Close</button>
+    </div>
+  </div>
 
         <section class="mx-auto lg:mt-10 lg:mb-10">
             <div class="bg-red-50 h-16">
@@ -136,6 +150,6 @@
         </section>
     </main>
 
-    <script src="dom.js"></script>
+    <script src="App.js"></script>
 </body>
 </html>
