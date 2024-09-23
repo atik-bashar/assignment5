@@ -104,4 +104,5 @@ function closeModal() {
 // Initially hide the success modal
 document.getElementById("successModal").classList.add("hidden");
 
+document.querySelector("#successModal button").addEventListener("click", closeModal);
 
