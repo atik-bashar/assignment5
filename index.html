@@ -76,7 +76,7 @@
 
       <!--Card section-2 -->
 
-      <section class="flex justify-around border rounded-xl">
+      <section class="flex justify-around border rounded-xl lg:mt-10">
           <div class=" mt-10 card lg:card-side bg-base-100 shadow-xl">
               <div>
                 <img
@@ -91,7 +91,7 @@
                          </button>
                   </div>
                 <h2 class="card-title text-3xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h2>
-                <p class="text-xl">The recent floods in Feni have devastated local communities, leading to severe disruption <br> and loss. Your generous donation will help provide immediate aid, including food,  clean <br> water, and medical supplies, to those affected by this calamity. Together, we can offer  crucial <br> support and help rebuild lives in the aftermath of this disaster.Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
+                <p class="text-xl">"The recent floods in Feni have devastated local communities, leading <br> to severe disruption and loss. Your generous donation <br> will help provide immediate aid, including food, clean water, and <br> medical supplies, to those affected by this calamity. Together, we can offer <br> crucial support and help rebuild lives in the aftermath of this disaster.</p>
                 <input class="text-xl  rounded-lg grid col-span-full bg-slate-100 p-5" type="number" id="donationAmount2" placeholder="Write Donation Amount">
                 <div class="card-actions grid">
                   <button onclick="donate(2)" class="btn btn-primary col-span-full text-2xl font-semibold">Donate Now</button>
@@ -117,7 +117,7 @@
                          </button>
                   </div>
                 <h2 class="card-title text-3xl font-bold">Aid for Injured in the Quota Movement</h2>
-                <p class="text-xl">The recent Quota movement has resulted in numerous injuries and significant  hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every  donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+                <p class="text-xl">The recent Quota movement has resulted in numerous injuries <br> and  significant hardship for many individuals. Your support is <br>crucial in providing medical assistance, rehabilitation, and necessary <br> supplies to those  affected. By contributing, you help ensure that injured <br> individuals  receive the care and support they need during this challenging time.</p>
                 <input id="donationAmount3" class="text-xl  rounded-lg grid col-span-full bg-slate-100 p-5" type="number" placeholder="Write Donation Amount">
                 <div class="card-actions grid">
                   <button class="btn btn-primary col-span-full text-2xl font-semibold" onclick="donate(3)">Donate Now</button>
@@ -136,10 +136,13 @@
 
       <!-- Modal for Successful Donation -->
 
-  <div id="successModal" class="modal fixed inset-0 bg-gray-700 bg-opacity-75 flex items-center justify-center">
+  <div id="successModal" class="modal fixed inset-0 bg-orange-200 bg-opacity-75 flex items-center justify-center">
     <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-      <p class="text-xl font-semibold">Donation Successful!</p>
-      <button class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 mt-4 rounded" onclick="closeModal()">Close</button>
+      <h2 class="text-xl font-semibold">Congrats!</h2>
+      <img src="./assets/coin.png" alt="">
+      <p>You Have Donated For Humankind</p>
+      <h3>Successfully </h3>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 mt-4 rounded" onclick="closeModal()">Close Confirmation</button>
     </div>
   </div>
 
